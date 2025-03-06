@@ -23,7 +23,12 @@ import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
+
+const LottiePlayer = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 
 const toolboxItems = [
   {
@@ -154,7 +159,7 @@ const About = () => {
             </div>
 
             <div>
-              <Player
+              <LottiePlayer
                 autoplay
                 loop
                 src="https://assets6.lottiefiles.com/packages/lf20_m64r7cwa.json"
