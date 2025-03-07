@@ -5,6 +5,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import HeroOrbit from "@/components/HeroOrbit";
+import { BsFileEarmarkPdf } from "react-icons/bs";
 
 const Hero = () => {
   return (
@@ -136,11 +137,12 @@ const Hero = () => {
             <ArrowDown className="size-4" />
           </a>
           <a
-            href="#contact"
-            className="z-40 inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl"
+            href="/Ketan%27s%20Resume.pdf"
+            download="Ketan's Resume.pdf"
+            className="z-40 inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-white/90 transition duration-200"
           >
-            <span>👋</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
+            <BsFileEarmarkPdf className="size-5" />
+            <span className="font-semibold">Download Resume</span>
           </a>
         </div>
       </div>
